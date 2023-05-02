@@ -1,0 +1,5432 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin C:/Users/itama/Desktop/
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\begin_inset Formula $Neural\,\,Network\,\,For\,\,Images$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Ex2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+איתמר שכטר
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+315092759
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $itamar.sh$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלות פרקטיות:
+\end_layout
+
+\begin_layout Standard
+שאלה פרקטית 
+\series bold
+ראשונה
+\series default
+ 
+\begin_inset Formula $Auto\,\,Encoding$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+בחרתי להשתמש בארכיטקטורה של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכבות קונבולוציה עם קרנל בגודל שלוש בלי 
+\begin_inset Formula $padding$
+\end_inset
+
+, בשכבה השנייה והרביעית הוספתי 
+\begin_inset Formula $stride=2$
+\end_inset
+
+ בשביל ליצור אפקט של 
+\begin_inset Formula $down\,\,sampeling$
+\end_inset
+
+.
+ ה
+\begin_inset Formula $decoder$
+\end_inset
+
+ בהתאם עם 
+\begin_inset Formula $output\,\,padding=1$
+\end_inset
+
+ בשכבה השנייה והרביעית כדי שההגדלה תיתבצע למספרים זוגיים.
+\end_layout
+
+\begin_layout Standard
+בסוף ה
+\begin_inset Formula $encoder$
+\end_inset
+
+ ותחילת ה
+\begin_inset Formula $decoder$
+\end_inset
+
+ הייתה שכבת 
+\begin_inset Formula $fc$
+\end_inset
+
+ מתאימה ביחס לגודל הקלט שהוא הפלט/קלט של שכבת הקונבולוציה/דיקונבלוציה ומימד
+ ה
+\begin_inset Formula $latent\,\,vector$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בצורה כזאת הקלט מתחיל בגודל של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+28
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+28
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לפי הדאטא ובסוף ה
+\begin_inset Formula $encoder$
+\end_inset
+
+ המימדים הם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+על כמות הערוצים של השכבה האחרונה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בנוסף השתמשתי ב
+\begin_inset Formula $sigmoid$
+\end_inset
+
+ בסוף ה
+\begin_inset Formula $decoder$
+\end_inset
+
+ ובפונקציית לוס 
+\begin_inset Formula $BCE$
+\end_inset
+
+ עם אופטימייזר 
+\begin_inset Formula $Adam$
+\end_inset
+
+, בין היתר בשביל הרגולריזציה שהוא נותן.
+\end_layout
+
+\begin_layout Standard
+כמות האפוקים בשלב הזה הייתה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בחלק הראשון - בו רצינו לקבע את המשקולות ולשנות את ה
+\begin_inset Formula $latent\,\,dimension$
+\end_inset
+
+ בחרתי בכמות הערוצים הבאה:
+\end_layout
+
+\begin_layout Standard
+בשכבת הקונבלוציה הראשונה )די קונבלוציה אחרונה( בחרתי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ערוצים.
+\end_layout
+
+\begin_layout Standard
+ולפי הסדר בחרתי ב
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ השכבות הבאות 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+32
+\numeric off
+ 
+\numeric on
+64
+\numeric off
+ 
+\numeric on
+128
+\numeric off
+.
+ ככה שנשמר הרעיון של הגדלת כמות הערוצים לקראת סיום הקונבולוציה.
+ כמובן שהדיקונבלוציה בהתאם.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ערכתי בדיקה עם
+\begin_inset Formula $latent\,\,dimension$
+\end_inset
+
+ בגדלים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+ 
+\numeric on
+5
+\numeric off
+ 
+\numeric on
+10
+\numeric off
+ 
+\numeric on
+20
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו
+\numeric on
+784
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+אלה התוצאות שקיבלתי:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space train.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space test.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ניתן לראות בשלב ראשוני שיש קורולוציה מעולה בין כמה שאנחנו מכריחים את המודל
+ לדחוס את המידע לבין הלוס שהוא מקבל.
+ כלומר ככל שנדחוס את המידע יותר אנחנו נגיע ללוס גבוה יותר כי קשה לו יותר
+ לשחזר תמונה מפחות מידע.
+\end_layout
+
+\begin_layout Standard
+בנוסף נראה שהמודל לא מצליח ללמוד באופן מושלם ולהגיע ללוס
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אפילו על ה
+\begin_inset Formula $train$
+\end_inset
+
+ אפילו כשאני נותן לו לדחוס את המידע לוקטור בגודל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+784
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שזה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+28
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בריבוע ככה שטכנית הוא יכל ללמוד וריאציה של פונקציית הזהות ולהגיע ללוס
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+מה שכן אפשר לראות שהתוצאה הויזואלית באמת מגיעה לתוצאה מרשימה ככל שמגדילים
+ את הוקטור ולתוצאה בינונית ואפילו גרועה ככל שמקטינים.
+\end_layout
+
+\begin_layout Standard
+הנה התוצאות בצורה ויזואלית:
+\end_layout
+
+\begin_layout Standard
+השורה הראשונה זה הקלט ולמטה זה הפלט של המודל -
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $latent\,\,dimension=2$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space 2.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ניתן לראות פה ממש ספרות שגויות - הרבה פעמים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו
+\numeric on
+7
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נהפכים ל
+\numeric on
+9
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+והכל יחסית מטושטש.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $latent\,\,dimension=5$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space 5.png
+	lyxscale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאן הספרות שוחזרו באופן יחסית מוצלח אך התמונה תמיד קצת מטושטשת למרות שניתן
+ לזהות את הספרה הנכונה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $latent\,\,dimension=10$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space 10.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+עדיין קצת מטושטש - איכות יחסית סבירה.
+ יותר טוב מהמודל הקודם.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $latent\,\,dimension=20$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space 20.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+די מוצלח - בקושי מטושטש אפילו.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $latent\,\,dimension=784$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename latent space 784.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מאוד מדויק, חדי עין כן יזהו שינויים מינוריים.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+לסיכום
+\series default
+ השלב הראשון - הצלחנו לשחזר כבר ממימד לא גדול של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ו
+\numeric on
+20
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שיחזור די מדויק של כל ספרה.
+ ראינו גם שלא מגיעים בקלות לשיחזור אמיתי.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+חלק שני של שאלה ראשונה
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+בשלב הזה קיבעתי את ה
+\begin_inset Formula $latent\,\,dimension$
+\end_inset
+
+ להיות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ושיניתי את כמות הערוצים ב
+\numeric on
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+השכבות ב
+\begin_inset Formula $encoder$
+\end_inset
+
+ וה
+\begin_inset Formula $decoder$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+בחרתי להריץ
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אפוקים הפעם כדי באמת לנסות ולבחון 
+\begin_inset Formula $overfit$
+\end_inset
+
+ וההתנהגויות דומות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הרצתי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מודלים עם כמות ערוצים שונה.
+\end_layout
+
+\begin_layout Standard
+כאמור, יש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכבות קונבולוציה, רציתי מצד אחד לאפשר בדיקות עם כמות פרמטרים קטנה - ולכן
+ לא רציתי ששכבת הקונבולוציה האחרונה שמתחברת לשכבת ה
+\begin_inset Formula $fc$
+\end_inset
+
+ תיהיה עם הרבה ערוצים כי אז זה היה מכפיל את כמות הפרמטרים בשכבת ה
+\begin_inset Formula $fc$
+\end_inset
+
+ שהיא בעלת הרבה פרמטרים ללמידה בסופו של דבר.
+\end_layout
+
+\begin_layout Standard
+מצד שני רציתי שתיהיה הגדלה של כמות הערוצים ככל שמתקדמים ברשת הקונבלוציה.
+\end_layout
+
+\begin_layout Standard
+לכן החלטתי על
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+מספרים בכל רשת שייצגו את כמות הערוצים.
+ המספר הראשון, הקטן ייצג את כמות הערוצים ב
+\numeric on
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+השכבות הראשונות והשני באחרונות.
+\end_layout
+
+\begin_layout Standard
+לדוגמא הכי קטן היה עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+ 
+\numeric on
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ כלומר 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ ערוצים ב
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+השכבות הראשונות
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+, ו
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+באחרונות.
+\end_layout
+
+\begin_layout Standard
+והכי גדול היה עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+64
+\numeric off
+ 
+\numeric on
+128
+\numeric off
+ 
+\numeric on
+256
+\numeric off
+ 
+\numeric on
+512
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כלומר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+64
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בראשונה והאחרונה עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+512
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ערוצים.
+\end_layout
+
+\begin_layout Standard
+להערכתי הקנה מידה הראשונה יחסית קטן והאחרון יחסית גדול.
+ ועם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+15
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אפוקים אנחנו אמורים להבחין בתוצאות מעניינות.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+תוצאות אינטרפולציה ראשונה עם מימד של 
+\begin_inset Formula $latent\,space=10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+השורה הראשונה היא רצף של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמונות מהטסט סט.
+\end_layout
+
+\begin_layout Standard
+השורה השנייה היא גם רצף אחר של
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמונות מהטסט סט.
+\end_layout
+
+\begin_layout Standard
+אנחנו נחבר בין השורות ונקבל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שילובים של ספרות שונות.
+\end_layout
+
+\begin_layout Standard
+חמשת השורות הבאות אלו
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אינטרפולציות עם 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ שנעה בין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0.9
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל
+\numeric on
+0.1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וככה אפשר לראות את המיזוג שבהתחלה נוטה מאוד לטובת התמונות בשורה הראשונה
+ ולאט לאט מתחלף לתמונה השנייה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת נריץ את אותו קוד עם 
+\begin_inset Formula $latent\,\,space=20$
+\end_inset
+
+ ונראה מה קורה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted2.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לצורך ההשוואה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הקצנתי והשתמשתי במודל עם 
+\begin_inset Formula $latent\,\,space=728$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+אלו התוצאות:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted3.png
+	lyxscale 80
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אפשר לראות בעין שככל שה
+\begin_inset Formula $latent\,\,space$
+\end_inset
+
+ יותר גדולה ההתוצאה של האנטרפולציה לא נותנת תשובה שנראית כמו ספרה.
+ כלומר האיכות קטנה ולכן עדיף מימד יותר נמוך.
+\end_layout
+
+\begin_layout Standard
+בנוסף כשה
+\begin_inset Formula $latent\,\,space$
+\end_inset
+
+ נמוך האינטרפולציה נראית יותר מטושטשת ופחות חד משמעית וכשה
+\begin_inset Formula $latent\,\,space$
+\end_inset
+
+ גבוה המיזוג בין הספרות לא יוצר משהו מובן אבל כן משהו חד.
+\end_layout
+
+\begin_layout Standard
+אני חושב שהסיבה לכך נובעת מהעובדה שהלוס הוא בעייה עם נקודות מינימום שמנסים
+ להגיע אליהם - ככל שה
+\begin_inset Formula $latent\,\,space$
+\end_inset
+
+ יותר נמוך המימד קטן יותר ולכן המרחק בין נקודות המינימום יחסית קטן - מה
+ שמאפשר מיזוג לינארי שהוא בעצמו בעל לוס נמוך.
+ לעומת זאת כש
+\begin_inset Formula $latent\,\,space$
+\end_inset
+
+ גבוה הבעייה בעלת מימד גבוה יותר והמיזוג הלינארי יכול להתרחק בקלות רבה יותר
+ - מה שיגרור תוצאה מה
+\begin_inset Formula $decoder$
+\end_inset
+
+ שלא קרובה לשום נקודת מינימום שהוא התכנס אליה.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פרקטית:
+\end_layout
+
+\begin_layout Standard
+לקחתי את המודלים משאלה 
+\numeric on
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+והרצתי אותם על כל הטסט סט, כלומר
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אלף תמונות.
+\end_layout
+
+\begin_layout Standard
+כלומר כל מודל רץ על כל הטסט סט - לאחר מכן ביצעתי לכל מודל את הפעולות הבאות:
+\end_layout
+
+\begin_layout Standard
+לקחתי את הוקטור שה
+\begin_inset Formula $encoder$
+\end_inset
+
+ פלט לכל תמונה וככה קיבלתי לכל קואורדינטה ב
+\begin_inset Formula $latent\,\,vector$
+\end_inset
+
+ )כלומר בווקטור הייצוג של התמונה אחרי הדחיסה( ווקטור באורך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אלף שייצג את הפיצ'ר הנוכחי.
+\end_layout
+
+\begin_layout Standard
+בשלב הזה לקחתי וביצעתי קורולציה בין כל ווקטורי הפיצ'רים ככה שקיבלתי מטריצה
+ )סימטרית( עם הקורלציות בין הפיצ'רים, המטריצה בגודל ה
+\begin_inset Formula $d$
+\end_inset
+
+ על 
+\begin_inset Formula $d$
+\end_inset
+
+ כש
+\begin_inset Formula $d$
+\end_inset
+
+ הוא אורך ה
+\begin_inset Formula $latent\,\,vector$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+למטריצה הזאת ביצעתי ערך מוחלט לכל הערכים בה וממוצע של כל הערכים בה וככה
+ קיבלתי ערך יחיד שמייצג את כמות הקורלוציה לכל מודל.
+\end_layout
+
+\begin_layout Standard
+אלו התוצאות שקיבלתי:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted4.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ניתן לראות באופן יחסית מובהק ירידה בקורולציה ככל שה
+\begin_inset Formula $d$
+\end_inset
+
+ גדל.
+\end_layout
+
+\begin_layout Standard
+ההגיון מאחורי זה הוא שכשווקטור הייצוג גדול יותר ניתן לשמור יותר פיצ'רים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ שונים זה מזה ללא תלות אחד בשני.
+\end_layout
+
+\begin_layout Standard
+כשהמידע דחוס לווקטור קטן יש יחסים יותר ברורים כי המידע חייב להכליל את כל
+ מה שהוא ראה ולכן לכל תמונה חדשה שהוא מנסה ללמוד הוא ייאלץ להזיז מעט ממידע
+ שעזר לייצג תמונה אחרת - ככה שמעט ייצוג יצטרך לכלול המון מידע ולכן כל קואורדינטה
+ בפני עצמה תצטרך גם קואורדינטות אחרות כדי לסמן על תכונה ספציפית.
+ לעומת זאת אם היה הרבה מקום לייצג את המידע כל תכונה ספציפית יכלה לקבל קוראורדינט
+ה נפרדת או קרוב לכך.
+\end_layout
+
+\begin_layout Standard
+לפעמים יכול להיות שהגדלה של מספר הפיצ'רים כן יגרום לעלייה קטנה בקורלוציה,
+ אני אישית לא ראיתי את זה - אולי כי לא בחרתי מספיק גדלי ווקטור לבדוק.
+ הסיבה לעלייה כזאת יכולה להיות תלויה בקשר שנוצר בין כמה פיצ'רים ספציפיים
+ שמגדירים תכונות דומות שעדיין יותר חשובות משאר התכונות.
+ כמו למשל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תכונות שמגדירות סוג של כלב כי מופיעים הרבה כלבים, למרות שכשהיה לנו ווקטור
+ ייצוג קטן יותר לא יכולנו לתת על זה את הדעת כי יש דברים יותר חשובים מאיזה
+ סוג של כלב.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פרקטית:
+\end_layout
+
+\begin_layout Standard
+בחרתי להישאר עם המודל המקורי - כשה
+\begin_inset Formula $latent\,\,space=10$
+\end_inset
+
+ ויש
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכבות קונבלוציה עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+16,32,64,128
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ערוצים בהתאם לכל שכבה עם 
+\begin_inset Formula $fc$
+\end_inset
+
+ בסוף ו
+\begin_inset Formula $relu$
+\end_inset
+
+ כאקטיבציה.
+\end_layout
+
+\begin_layout Standard
+הרצתי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פעמים סה
+\begin_inset Quotes erd
+\end_inset
+
+כ,
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עם שינוי המשקולות של ה
+\begin_inset Formula $encoder$
+\end_inset
+
+ ו
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בלי השינוי.
+ על אימון שונה של תמונות.
+\end_layout
+
+\begin_layout Standard
+כשמריצים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמונות באימון:
+\end_layout
+
+\begin_layout Standard
+כשמפרידים )מאמנים רק את ה
+\begin_inset Formula $MLP$
+\end_inset
+
+ וה
+\begin_inset Formula $encoder$
+\end_inset
+
+ נשאר אותו דבר(:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted7.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כשמחברים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted8.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+התוצאות הן טובות יותר כשמאמנים מחדש רק את ה
+\begin_inset Formula $MLP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כשמריצים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+50
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמונות באימון:
+\end_layout
+
+\begin_layout Standard
+כשמפרידים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted5.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כשמחברים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted6.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+שוב התוצאות הן טובות יותר כשמאמנים מחדש רק את ה
+\begin_inset Formula $MLP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+כשמריצים 
+\numeric on
+100
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמונות באימון:
+\end_layout
+
+\begin_layout Standard
+כשמפרידים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted9.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כשמחברים:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted10.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת התוצאות הן טובות יותר כשמאמנים מחדש את כל המודל כולל ה
+\begin_inset Formula $encoder$
+\end_inset
+
+ ולא רק את ה
+\begin_inset Formula $MLP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+הסיבה לכך היא שיש קצת אימון אז ניתן יותר בקלות להתכנס לאימון טוב על כמות
+ קטנה של פרמטרים
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ולכן לאמן רק את ה
+\begin_inset Formula $MLP$
+\end_inset
+
+ עבד יותר טוב כשמנסים לאמן שוב על מעט תמונות.
+ ככה הגראדיינטים לא ניסו להתפרש על מרחב ענק של פרמטרים והצליחו לבצע התכנסות
+ של המודל הקטן מהר יותר.
+\end_layout
+
+\begin_layout Standard
+לעומת זאת כשהגענו כבר ל
+\numeric on
+100
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תמונות כנראה כבר החלקשל המודל הקטן הצליח להתכנס אפילו על המודל המשולב ולכן
+ מכיוון שהמודל המשולב מתאמן על כמות גדולה של פרמטרים הוא מצליח להגיע בסך
+ הכל לפתרון יותר טוב.
+\end_layout
+
+\begin_layout Standard
+במידה והיינו לוקחים מודל 
+\begin_inset Formula $MLP$
+\end_inset
+
+ קטן יותר אזי היה ניתן לראות את ההפרש בלימוד עם כמות תמונות קטנה אפילו יותר
+ טוב.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלות תיאורטיות:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\end_layout
+
+\begin_layout Standard
+הראו שהרכבה של פונקציות לינאריות היא פונקציה לינארית.
+\end_layout
+
+\begin_layout Standard
+הוכחה: יהי 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פונקציות לינאריות.
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ ממפה איברים לגודל קלט ש
+\begin_inset Formula $f$
+\end_inset
+
+ מקבל.
+\end_layout
+
+\begin_layout Standard
+מכיוון ששניהן פונקציות לינאריות הן מקיימות:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x_{1}+y_{1})=f(x_{1})+f(y_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(x_{2}+y_{2})=g(x_{2})+g(y_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a\cdot f(x_{1})=f(ax_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a\cdot g(x_{2})=g(ax_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כש
+\begin_inset Formula $a$
+\end_inset
+
+ הוא סקלר ו
+\begin_inset Formula $x_{i},y_{i}$
+\end_inset
+
+ ווקטורים באותו גודל.
+\end_layout
+
+\begin_layout Standard
+נוכיח ש
+\begin_inset Formula $h=g(f)$
+\end_inset
+
+ היא מקיימת את
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+התכונות הללו:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(x_{1}+y_{1})=g(f(x_{1}+y_{1}))=g(f(x_{1})+f(y_{1}))=g(f(x_{1}))+g(f(y_{1}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לפי
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תכונות הלינאריות של 
+\begin_inset Formula $f$
+\end_inset
+
+ ו
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נוכיח תכונה שנייה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+a\cdot h(x_{1})=a\cdot g(f(x_{1}))=g(a\cdot f(x_{1}))=g(f(a\cdot x_{1}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+יכולנו בשיטה אחרת גם להשתמש בקשר בין מטריצה לפונציה לינארית ואז לבצע כפל
+ מטריצות ולקבל מטריצה יחידה ואז להשתמש בטענה שלכל מטריצה יש פונקציה לינארית
+ תואמת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הראו שהרכבה של פונקציות אפיניות היא פונקציה אפינית.
+\end_layout
+
+\begin_layout Standard
+פונקציה אפינית מוגדרת באמצעות הנוסחא 
+\begin_inset Formula $f=mx+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כש
+\begin_inset Formula $m$
+\end_inset
+
+ יכולה להיות טנזור מכל סוג ו
+\begin_inset Formula $x$
+\end_inset
+
+ ו
+\begin_inset Formula $b$
+\end_inset
+
+ בהתאם למימדים שאנחנו מקבלים ופולטים.
+\end_layout
+
+\begin_layout Standard
+התכונות של פונקציה כזאת היא לינאריות וקיום קבוע 
+\begin_inset Formula $b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+קרי, יהי 
+\begin_inset Formula $f$
+\end_inset
+
+ פונקציה אפינית אזי 
+\begin_inset Formula $f$
+\end_inset
+
+ היא לינארית ומקיימת:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(0)=b
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כש
+\begin_inset Formula $b$
+\end_inset
+
+ הוא קבוע כלשהו עם מימד כמו שהסברנו.
+\end_layout
+
+\begin_layout Standard
+נוכיח:
+\end_layout
+
+\begin_layout Standard
+יהי 
+\begin_inset Formula $f,g$
+\end_inset
+
+ פונקציות אפיניות - אזי הן לינאריות ולכן ההרגה שלהן לינארית כמו שהוכחנו.
+\end_layout
+
+\begin_layout Standard
+נסמן אותן כך:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f=m_{1}x+b_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g=m_{2}x+b_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נוכיח כעת שיש להרכבה שלהן גם קבוע:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+h(0)=g(f(0))=g(b_{1})=m_{2}b_{1}+b_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומכיוון שכל הרכיבים בצד ימין של המשוואה קבועים אזי קיבלנו קבוע.
+\end_layout
+
+\begin_layout Standard
+מש
+\begin_inset Quotes erd
+\end_inset
+
+ל.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תיאורטית:
+\end_layout
+
+\begin_layout Standard
+שאלה: מהו תנאי העצירה של: 
+\begin_inset Formula $\theta^{n+1}=\theta^{n}-\alpha\nabla f_{\theta^{n}}(x)$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Standard
+תשובה: לשאלה הזאת יש כמה תשובות.
+\end_layout
+
+\begin_layout Standard
+מכיוון שמדובר במודלי למידה, ולא בתשובה מתמטית, אזי כל אחת מהתשובות שאני
+ אביא היא תשובה שאמורה להיות הגיונית ואפילו שילוב שלהן.
+ בסוף מתכנתים את זה ורוצים שהמודל יעצור ללמוד כשהגענו לנקודת מינימום כלשהי
+ של הלוס.
+\end_layout
+
+\begin_layout Standard
+מתי נרצה להפסיק להתאמן? כשהאימון כבר לא יעיל וכל איטרציה נוספת לא מבצעת
+ שינוי משמעותי.
+\end_layout
+
+\begin_layout Standard
+נוכל להחליט לעצור על פי תנאי של 
+\begin_inset Formula $threshold$
+\end_inset
+
+ שנבחר שאם הגראדיינט באיטרציה מסוימת קטן ממנו בערכו המוחלט אז נצא מהלולאה.
+\end_layout
+
+\begin_layout Standard
+כמובן שנוכל לבחור תנאים שקשורים למגבלות החישוב שלנו - כמו מספר איטרציות
+ מקסימלי או ערך לוס מסוים שכשירדנו ממנו זה מספיק לנו.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+שאלה: השתמש במשפט טיילור רב מימדי מסדר שני כדי להגדיר תנאי שיאפשר לסווג
+ נקודה סטיציונארית כמינימום או מקסימום לוקאלי.
+\end_layout
+
+\begin_layout Standard
+תשובה: נרצה לבצע חישוב אחיד שייתן לנו תוצאה חד משמעית האם הנקודה הסציונארית
+ היא מינימום או מקסימון לוקאלי, וגם יש אפשרות שהיא נקודת אוכף.
+\end_layout
+
+\begin_layout Standard
+מכיוון שהנקודה סטציונארית אזי הנגזרת שלה מתאפסת ונרצה להסתכל על הנגזרת השנייה
+ שלה.
+\end_layout
+
+\begin_layout Standard
+מכיוון שאנחנו בעולם רק מימדי הנגזרת השנייה שלה היא ההסיאן שלה.
+\end_layout
+
+\begin_layout Standard
+בעולם דו מימדי היינו רוצים לדעת האם בסביבה הקרובה של הנקודה הנגזרת השנייה
+ חיובית או שלילית.
+ בעולם של מטריצות זה מקביל לחישוב ערכים עצמיים.
+\end_layout
+
+\begin_layout Standard
+אם כל הערכים העצמיים של מטריצת ההסיאן הם חיוביים אזי קיבלנו מינימום לוקאלי
+ - הפונקציה בעצם קמורה בסביבה של הנקודה.
+\end_layout
+
+\begin_layout Standard
+באופן שקול אם כל הערכים העצמיים שליליים אזי הפונקציה קעורה בסביבה ולכן יש
+ לנו נקודת מקסימום.
+\end_layout
+
+\begin_layout Standard
+אם חלק שליליים וחלק חיוביים אזי יש לנו אוכף.
+\end_layout
+
+\begin_layout Standard
+במידה ולפחות ערך עצמי אחד הוא אפס אזי אי אפשר למצוא פתרון באמצעות השיטה
+ הזאת כי אין לנו קמירות או קעירות חד משמעיים על הנקודה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
+\family roman
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+תיאורטית:
+\end_layout
+
+\begin_layout Standard
+נרצה לפתור בעייה של חיזוי זווית בין
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ל
+\numeric on
+360
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+פתרון: נשתמש ב
+\begin_inset Formula $CMAE$
+\end_inset
+
+ שזה קיצור של 
+\begin_inset Formula $circular\,\,mean\,\,absolute\,\,error$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+נסמן 
+\begin_inset Formula $y_{pred}$
+\end_inset
+
+ בתור הפרדיקציה ואת 
+\begin_inset Formula $y_{true}$
+\end_inset
+
+ בתור הלייבל.
+\end_layout
+
+\begin_layout Standard
+ונחשב:
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+1
+\numeric off
+( נקבל כקלט 
+\begin_inset Formula $y_{pred},y_{true}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+2
+\numeric off
+( נגדיר אובייקט בשם 
+\begin_inset Formula $diff$
+\end_inset
+
+ ונשים לו את הערך 
+\begin_inset Formula $|((y_{pred}-y_{true}+180)\%360)-180|$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+ככה בעצם נקבל ערך שהוא סוג של מרחק בין הפרדיקציות, )הסבר על החישוב עכשיו:(
+\end_layout
+
+\begin_layout Standard
+-אם הפרדיקציה גדולה מהלייבל:
+\end_layout
+
+\begin_layout Standard
+–אם המרחק שלהם קטן מ
+\numeric on
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אז נקבל ערך מתחת ל
+\numeric on
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שייצג את המרחק שלנו במדוייק כי לא היה פעולת מודולו ואז התוספת והחיסור של
+ ה
+\numeric on
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+הייתה על אותו הערך.
+\end_layout
+
+\begin_layout Standard
+–אם המרחק שלהם גדול מ
+\numeric on
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+אזי הזווית קטנה יותר מהכיוון השני ולכן כשנוסיף
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נקבל ערך גדול מ
+\numeric on
+360
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ואז פעולת המודולו תוריד אותנו למשלים ל
+\numeric on
+180
+\numeric off
+ של המרחק שלהם מהכיוון הקצר, מה שיגרור שפעולת מינוס ב
+\numeric on
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וערך מוחלט תביא בדיוק את המרחק שלהם זה מזה.
+\end_layout
+
+\begin_layout Standard
+נדגים, 
+\begin_inset Formula $y_{pred}=350,y_{true}=10$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|((y_{pred}-y_{true}+180)\%360)-180|=|((350-10+180)\%360)-180|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=|((340+180)\%360)-180|=|((520)\%360)-180|=|((160)-180|
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=|-20|=20
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-אם הפרדיקציה קטנה מהלייבל נקבל חישוב קצת הפוך.
+ כי ההפרש תמיד יהיה שלילי.
+\end_layout
+
+\begin_layout Standard
+–אם ההפרש קטן ממינוס
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נקבל ערך חיובי קטן מ
+\numeric on
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+והמודולו לא ישנה כלום והמינוס
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יחזיר לאותו הערך.
+ )הערך מוחלט יהפוך את זה למרחק האמיתי ולא ישאיר מינוס(
+\end_layout
+
+\begin_layout Standard
+–אם ההפרש גדול ממינוס
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+180
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+יהיה חישוב דומה של הזווית הנגדית כמו מקודם רק עם מינוס.
+ )סוף הסבר על החישוב(
+\end_layout
+
+\begin_layout Standard
+
+\numeric on
+3
+\numeric off
+( נחשב את ה
+\begin_inset Formula $MSE$
+\end_inset
+
+ של ה
+\begin_inset Formula $diff$
+\end_inset
+
+ ונחזיר כערך.
+ כלומר ההעלאה בריבוע וממוצע.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ תיאורטית:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(a$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial x}f(x+y,2x,z)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נגדיר פונקציה 
+\begin_inset Formula $g$
+\end_inset
+
+ שממפה את הקלט ל
+\begin_inset Formula $f$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{g(x,y,z)=(x+y,2x,z)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ומכלל השרשרת:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial}{\partial x}f(g(x,y,z))=\frac{\partial f}{\partial g}\cdot\frac{\partial}{\partial x}g(x,y,z)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נחשב את 
+\begin_inset Formula $\frac{\partial f}{\partial g}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial f}{\partial g}=\frac{\partial f}{\partial u}\cdot\frac{\partial u}{\partial g}+\frac{\partial f}{\partial v}\cdot\frac{\partial v}{\partial g}+\frac{\partial f}{\partial w}\cdot\frac{\partial w}{\partial g}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{\partial f}{\partial u}(1,0,0)+\frac{\partial f}{\partial v}(0,2,0)+\frac{\partial f}{\partial w}(0,0,1)=\left(\frac{\partial f}{\partial u},2\frac{\partial f}{\partial v},\frac{\partial f}{\partial w}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כשהגדרנו 
+\begin_inset Formula $\ensuremath{u=x+y,\,\,v=2x},\,\,\ensuremath{w=z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נמשיך בחישוב:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial}{\partial x}g(x,y,z)=(1,2,0)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מבניית 
+\begin_inset Formula $g$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial}{\partial x}f(x+y,2x,z)=\frac{\partial f}{\partial u}+2\frac{\partial f}{\partial v}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מהפעלת הנגזרת על כל רכיב.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial}{\partial x}f(x+y,2x,z)=\frac{\partial f}{\partial(x+y)}+2\frac{\partial f}{\partial(2x)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מהצבה.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(b$
+\end_inset
+
+ 
+\begin_inset Formula $f_{1}(f_{2}(...f_{n}(x)))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+תשובה: נבצע באופן רפטטיבי את כלל השרשרת על הפונקציה 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial}{\partial x}f_{1}(f_{2}(\dots f_{n}(x)))=\frac{\partial}{\partial u_{1}}f_{1}(u_{1})\cdot\frac{\partial u_{1}}{\partial x}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כש- 
+\begin_inset Formula $\ensuremath{u_{1}=f_{2}(\dots f_{n}(x))}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+ונחשב פנימה:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial u_{1}}{\partial x}=\frac{\partial}{\partial x}f_{2}(\dots f_{n}(x))=\frac{\partial}{\partial u_{2}}f_{2}(u_{2})\cdot\frac{\partial u_{2}}{\partial x}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כש - 
+\begin_inset Formula $\ensuremath{u_{2}=f_{3}(\dots f_{n}(x)..))}$
+\end_inset
+
+.
+ נמשיך באופן גנרי עם 
+\begin_inset Formula $u_{i}=f_{i+1}(...f_{n}(x)..))$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{\frac{\partial}{\partial x}f_{1}(f_{2}(\dots f_{n}(x)))=\frac{\partial}{\partial u_{1}}f_{1}(u_{1})\cdot\frac{\partial}{\partial u_{2}}f_{2}(u_{2})\cdot\frac{\partial}{\partial u_{3}}f_{3}(u_{3})\dots\frac{\partial}{\partial x}f_{n}(x)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(c$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{1}(x,f_{2}(x,f_{3}(...f_{n-1}(x,f_{n})))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+תשובה: נבצע באופן רפטטיבי את כלל השרשרת על הפונקציה 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+הפעם כל פונקציה מקבלת
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ פרמטרים ולכן נצטרך לגזור פעמיים לכל 
+\begin_inset Formula $f_{i}$
+\end_inset
+
+ לפי כל פרמטר ולחבר את הנגזרות.
+\end_layout
+
+\begin_layout Standard
+ולכן:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d}{dx}f_{1}(x,f_{2}(x,f_{3}(...f_{n-1}(x,f_{n})))=\frac{\partial f_{1}}{\partial x}+\frac{\partial f_{1}}{\partial f_{2}}\cdot\frac{\partial f_{2}}{\partial x}=\frac{\partial f_{1}}{\partial x}+\frac{\partial f_{1}}{\partial f_{2}}\cdot\left(\frac{\partial f_{2}}{\partial x}+\frac{\partial f_{2}}{\partial f_{3}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{\partial f_{1}}{\partial x}+\frac{\partial f_{1}}{\partial f_{2}}\cdot\left(\frac{\partial f_{2}}{\partial x}+\frac{\partial f_{2}}{\partial f_{3}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+וככה נמשיך לפתח פנימה את המשוואה כשכל 
+\begin_inset Formula $\frac{\partial f_{i}}{\partial x}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial f_{i}}{\partial x}=\left(\frac{\partial f_{i+1}}{\partial x}+\frac{\partial f_{i}}{\partial f_{i+1}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(d$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+f(x+g(x+h(x)))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נפרק כל ביטוי כפול סכום הנגזרות של הפונקציות הפנימיות:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{\frac{df}{dx}=\frac{\partial}{\partial x}\ensuremath{f(x+g(x+h(x))\cdot(1+\frac{\partial}{\partial x}g(x+h(x)))\cdot(1+\frac{\partial}{\partial x}h(x))}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
