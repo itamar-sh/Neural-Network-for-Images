@@ -30,7 +30,7 @@ Demonstration of reconstruction success in relation to latent space size:<br/>
 
 ## Generative Adversarial Networks (GANs)
 In this part I trained a generative adversarial model to produce images of a particular distribution.<br/>
-generator network can follow the DCGAN architecture. Generator: FC woth convs. Discrimator: classification network which decide: real or fake image..<br/>
+generator network can follow the DCGAN architecture. Generator: FC with convs. Discrimator: classification network which decide: real or fake image..<br/>
 
 Main points: Loss saturation, Model Inversion and Image restoration including denoise and inpainting.<br/>
 
