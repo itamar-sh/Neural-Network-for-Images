@@ -26,3 +26,18 @@ Demonstration of reconstruction success in relation to latent space size:<br/>
   src="resources/AutoEncoder/latent space test.png"
   title="AE example"
   style="display: inline-block; margin: 0 auto;" width="350" height="200"><br/>
+
+
+## Generative Adversarial Networks (GANs)
+In this part I trained a generative adversarial model to produce images of a particular distribution.<br/>
+generator network can follow the DCGAN architecture. Generator: FC woth convs. Discrimator: classification network which decide: real or fake image..<br/>
+
+Main points: Loss saturation, Model Inversion and Image restoration including denoise and inpainting.<br/>
+
+Example of denoising using Gan and latent optimization:<br/>
+<img
+  src="resources/images/Denoise Example using Gan.png"
+  title="Gan example"
+  style="display: inline-block; margin: 0 auto;" width="350" height="200"><br/>
+
+
