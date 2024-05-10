@@ -13,12 +13,10 @@ import torch
 import torchvision
 import torchvision.transforms as transforms
 import torch.nn as nn
-import torch.nn.functional as F
 import torch.optim as optim
 import matplotlib.pyplot as plt
-import numpy as np
 
-!pip install wandb
+# !pip install wandb
 
 import wandb
 wandb.login()
@@ -90,9 +88,9 @@ def check_nets(nets):
     for j, net in enumerate(nets):
         wandb.init(
         # Set the project where this run will be logged
-        project="Encode Decoder - CNN - AE", 
+        project="Encode Decoder - CNN - AE",
         # We pass a run name (otherwise it’ll be randomly assigned, like sunshine-lollypop-10)
-        name=net.get_name(), 
+        name=net.get_name(),
         # Track hyperparameters and run metadata
         config={
         "learning_rate": 0.01,
@@ -129,7 +127,7 @@ def check_nets(nets):
                     wandb.log({"train_loss": running_loss / (num_of_images), "test_loss": cur_test_loss})
                     print(f'train epoch: [{epoch + 1}, {i + 1:5d}] train_loss: {running_loss / (num_of_images):.5f} test loss: {cur_test_loss :.3f}')
                     running_loss = 0.0
-        
+
         wandb.finish()
         print('Finished Training')
 
@@ -267,12 +265,12 @@ class AutoencoderGeneral(nn.Module):
         return self.name
 
 nets2 = [
-    AutoencoderGeneral(2).to(device), 
-    AutoencoderGeneral(4).to(device), 
-    AutoencoderGeneral(8).to(device), 
-    AutoencoderGeneral(16).to(device), 
-    AutoencoderGeneral(32).to(device), 
-    AutoencoderGeneral(128).to(device), 
+    AutoencoderGeneral(2).to(device),
+    AutoencoderGeneral(4).to(device),
+    AutoencoderGeneral(8).to(device),
+    AutoencoderGeneral(16).to(device),
+    AutoencoderGeneral(32).to(device),
+    AutoencoderGeneral(128).to(device),
 ]
 criterion = nn.BCELoss()
 l1_loss = nn.L1Loss()
@@ -325,7 +323,7 @@ with torch.no_grad():
         I2_encoded = net.encoder(I[1])
         interpolated_latent_space = (I1_encoded * a) + (I2_encoded * (1-a))  # intepollation of latent vectors
         result = net.decoder(interpolated_latent_space)
-        
+
         print(f"Interpolation of I1 and I2 with a = {a}:")
         fig, axs = plt.subplots(1, inputs.shape[0], figsize=(10, 10))
         for j in range(result.shape[0]):
@@ -377,7 +375,7 @@ with torch.no_grad():
         I2_encoded = net.encoder(I[1])
         interpolated_latent_space = (I1_encoded * a) + (I2_encoded * (1-a))  # intepollation of latent vectors
         result = net.decoder(interpolated_latent_space)
-        
+
         print(f"Interpolation of I1 and I2 with a = {a}:")
         fig, axs = plt.subplots(1, inputs.shape[0], figsize=(10, 10))
         for j in range(result.shape[0]):
@@ -423,9 +421,9 @@ def find_pearson_correlations(net, latent_size):
     print(corr_value)
     wandb.init(
     # Set the project where this run will be logged
-    project="Encode Decoder - CNN - AE", 
+    project="Encode Decoder - CNN - AE",
     # We pass a run name (otherwise it’ll be randomly assigned, like sunshine-lollypop-10)
-    name=f"latent space: {latent_size}", 
+    name=f"latent space: {latent_size}",
     # Track hyperparameters and run metadata
     config={
     "learning_rate": 0.01,
@@ -457,7 +455,7 @@ class MLP(nn.Module):
         self.fc3 = nn.Linear(32, 10)
         self.relu = nn.ReLU()
         self.softmax = nn.Softmax(dim=1)
-        
+
     def forward(self, x):
         x = self.relu(self.fc1(x))
         x = self.relu(self.fc2(x))
